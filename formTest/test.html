@@ -275,7 +275,8 @@
 			console.log(settings.url);
 
 			$.ajax(settings).done(function (response) {
-				console.log(response.data);
+				citiesData = response.data[0].region.cities;
+				console.log(citiesData);
 			});
 		});
 	</script>
