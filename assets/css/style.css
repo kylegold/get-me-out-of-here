@@ -2,6 +2,12 @@
 
 
 /*submit-btn for jordan's API of inputting and pulling covid data*/
+/* one level text input form */
+<div class="control">
+  <input class="input" type="text" placeholder="Text input">
+</div>
+
+/* two level input form */
 
 <div class="field">
   <label class="label">Name</label>
