@@ -43,21 +43,21 @@
     };
 
     // Ajax that rapidAPI included;
-    $.ajax(settings).done(function (response) {
-      //
-      // rrrossettiii's code
-      // - turn response into just an array;
-      var provinceData = response.data;
-      // loop - for every 'data' entry...;
-      for (i = 0; i < provinceData.length; i++) {
-        // - create option tag; apply the 'province' to the value of <option>; append option to datalist '.provinceDropdown';
-        var provinceOption = $("<option></option>");
-        provinceOption.attr("value", provinceData[i].province);
-        $(".provinceDropdown").append(provinceOption);
-      }
-      // /code
-      //
-    });
+    // $.ajax(settings).done(function (response) {
+    //   //
+    //   // rrrossettiii's code
+    //   // - turn response into just an array;
+    //   var provinceData = response.data;
+    //   // loop - for every 'data' entry...;
+    //   for (i = 0; i < provinceData.length; i++) {
+    //     // - create option tag; apply the 'province' to the value of <option>; append option to datalist '.provinceDropdown';
+    //     var provinceOption = $("<option></option>");
+    //     provinceOption.attr("value", provinceData[i].province);
+    //     $(".provinceDropdown").append(provinceOption);
+    //   }
+    //   // /code
+    //   //
+    // });
     // /Ajax
   </script>
   <script src="covidAPI.js"></script>
