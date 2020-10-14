@@ -1,0 +1,24 @@
+/* UPDATE ALL FIELDS TO BE CONNECTED TO API'S AND TO TAKE INFORMATION AND PUSH TO COVID-19API AND RETRIEVE INFORMATION PERTAINING TO THE PULL FROM THE USER CLICK EVENT AND COMPARE INFORMATION TO DATABASE AND THEN PULL BACK DOWN*/
+
+
+/*submit-btn for jordan's API of inputting and pulling covid data*/
+/* one level text input form */
+<div class="control">
+  <input class="input" type="text" placeholder="Text input">
+</div>
+
+/* two level input form */
+
+<div class="field">
+  <label class="label">Name</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="e.g Alex Smith">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Email</label>
+  <div class="control">
+    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+  </div>
+</div>
