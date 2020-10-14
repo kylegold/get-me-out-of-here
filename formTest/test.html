@@ -13,63 +13,26 @@
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- State List -->
+    <script defer src="stateList.js"></script>
+
+    <!-- Covid API -->
+    <script defer src="covidAPI.js"></script>
   </head>
   <body>
     <!-- Form -->
-    <label for="userProvince">Choose your State, County, or City:</label>
-    <input type="text" id="userInput" list="userProvince" name="userProvince" />
-
-    <datalist id="userProvince" class="provinceDropdown">
-      <option value="test"></option>
-    </datalist>
+    <label for="userState">Choose your State:</label>
+    <select name="userState" id="userState" class="stateDropdown">
+      <option value="blank">*State*</option>
+    </select>
+    <!-- /Form -->
+    <br />
+    <!-- Form -->
+    <label for="userCity">Choose your City:</label>
+    <select name="userCity" id="userCity" class="cityDropdown"></select>
     <button class="btn btn-outline-primary" type="button" id="submit-btn">
       Submit
     </button>
-    <!-- /Form -->
   </body>
-
-  <!-- JQuery Code -->
-  <script>
-    // Covid-19 API via rapidAPI;
-    const settings = {
-      async: true,
-      crossDomain: true,
-      url: "https://rapidapi.p.rapidapi.com/provinces?iso=USA",
-      method: "GET",
-      headers: {
-        "x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
-        "x-rapidapi-key": "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
-      },
-    };
-
-    // Ajax that rapidAPI included;
-    // $.ajax(settings).done(function (response) {
-    //   //
-    //   // rrrossettiii's code
-    //   // - turn response into just an array;
-    //   var provinceData = response.data;
-    //   // loop - for every 'data' entry...;
-    //   for (i = 0; i < provinceData.length; i++) {
-    //     // - create option tag; apply the 'province' to the value of <option>; append option to datalist '.provinceDropdown';
-    //     var provinceOption = $("<option></option>");
-    //     provinceOption.attr("value", provinceData[i].province);
-    //     $(".provinceDropdown").append(provinceOption);
-    //   }
-    //   // /code
-    //   //
-    // });
-    // /Ajax
-  </script>
-  <script src="covidAPI.js"></script>
 </html>
-<!--  -->
-
-<!--  -->
-
-<!--  -->
-
-<!--  -->
-
-<!--  -->
-
-<!--  -->
