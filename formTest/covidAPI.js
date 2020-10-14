@@ -3,11 +3,15 @@ var userChoice;
 
 // Create an onclick once user enters information into form
 $("#submit-btn").on("click", function(event){
-   userChoice = $("#userInput").val();
-    const settings = {
+//    userChoice = $("#userInput").val();
+   userChoice = "USA";
+   console.log(userChoice);
+   searchQuery = "https://covid-19-statistics.p.rapidapi.com/provinces?iso=" + userChoice 
+   console.log(searchQuery);
+   const settings = {
             async: true,
             crossDomain: true,
-            url: "https://rapidapi.p.rapidapi.com/reports?region_province=" + userChoice,
+            url: "https://covid-19-statistics.p.rapidapi.com/provinces?iso=" + userChoice,
             method: "GET",
             headers: {
                 "x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
@@ -23,9 +27,6 @@ $("#submit-btn").on("click", function(event){
 
 // Open Covid AJAX API and compare to location
 
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-
 // User looks at returned results and chooses
-response.push()
+
+// We need to take testResults value (string) and compare it to Total Report.Data.Confirmed
