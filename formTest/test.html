@@ -16,14 +16,18 @@
 	</head>
 	<body>
 		<!-- Form -->
-		<label for="userProvince">Choose your State, County, or City:</label>
-		<input id="userCity" type="text" list="userProvince" name="userProvince" />
-
-		<datalist id="userProvince" class="provinceDropdown">
-			<option value="test"></option>
-		</datalist>
-		<button id="userSubmit" type="submit">Submit</button>
+		<label for="userState">Choose your State:</label>
+		<select name="userState" id="userState" class="stateDropdown">
+			<option value="blank">*State*</option>
+		</select>
 		<!-- /Form -->
+		<br />
+		<!-- Form -->
+		<label for="userCity">Choose your City:</label>
+		<select name="userCity" id="userCity" class="cityDropdown"></select>
+		<button class="btn btn-outline-primary" type="button" id="submit-btn">
+			Submit
+		</button>
 	</body>
 
 	<!-- JQuery Code -->
@@ -249,21 +253,24 @@
 
 		// loop - for every 'data' entry...;
 		for (i = 0; i < statesList.length; i++) {
-			// - create option tag; apply the 'province' to the value of <option>; append option to datalist '.provinceDropdown';
+			// - create option tag; apply the 'province' to the value of <option>; append option to select '.stateDropdown';
 			var provinceOption = $("<option></option>");
-			provinceOption.attr("value", statesList[i].name);
-			$(".provinceDropdown").append(provinceOption);
+			provinceOption.attr("value", statesList[i].name).text(statesList[i].name);
+			$("#userState").append(provinceOption);
 		}
 
-		$("#userSubmit").click(function () {
-			userChoice = $("#userCity").val();
-			console.log(userChoice);
+		$("#userState").on("change", function () {
+			event.stopPropagation();
+			$("#userCity").children().remove().end();
+			userState = $("#userState").val();
+			console.log(userState);
+
 			const settings = {
 				async: true,
 				crossDomain: true,
 				url:
 					"https://rapidapi.p.rapidapi.com/reports?region_province=" +
-					encodeURIComponent(userChoice),
+					encodeURIComponent(userState),
 				method: "GET",
 				headers: {
 					"x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
@@ -271,12 +278,35 @@
 						"07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
 				},
 			};
-
 			console.log(settings.url);
-
 			$.ajax(settings).done(function (response) {
 				citiesData = response.data[0].region.cities;
 				console.log(citiesData);
+				for (i = 0; i < citiesData.length; i++) {
+					var cityOption = $("<option></option>");
+					cityOption.attr("value", citiesData[i].name).text(citiesData[i].name);
+					$(".cityDropdown").append(cityOption);
+				}
+				$("#submit-btn").off("click");
+				$("#submit-btn").on("click", function (event) {
+					$("#reportElement").remove().end();
+					event.stopPropagation();
+					userCityInput = $("#userCity").val();
+					for (i = 0; i < citiesData.length; i++) {
+						if (citiesData[i].name == userCityInput) {
+							console.log("works");
+							console.log(citiesData[i]);
+							console.log(i);
+							userReport = citiesData[i];
+							report = $("<h1>")
+								.text(
+									userReport.name + " confirmed cases: " + userReport.confirmed
+								)
+								.attr("id", "reportElement");
+							$("body").append(report);
+						}
+					}
+				});
 			});
 		});
 	</script>
