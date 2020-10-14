@@ -1,4 +1,4 @@
-var statesList = [
+var stateList = [
     {
         name: "Alabama",
         abbreviation: "AL",
