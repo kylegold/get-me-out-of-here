@@ -17,11 +17,12 @@
 	<body>
 		<!-- Form -->
 		<label for="userProvince">Choose your State, County, or City:</label>
-		<input type="text" list="userProvince" name="userProvince" />
+		<input type="text" id="userInput" list="userProvince" name="userProvince" />
 
 		<datalist id="userProvince" class="provinceDropdown">
 			<option value="test"></option>
 		</datalist>
+		<button class="btn btn-outline-primary" type="button" id="submit-btn">Submit</button>
 		<!-- /Form -->
 	</body>
 
@@ -56,7 +57,9 @@
 			//
 		});
 		// /Ajax
+		
 	</script>
+	<script src="covidAPI.js"></script>
 </html>
 <!--  -->
 
