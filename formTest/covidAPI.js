@@ -1,5 +1,5 @@
-// Covid-19 API
-// 
+// COVID-19 Statistics API
+// - https://rapidapi.com/axisbits-axisbits-default/api/covid-19-statistics?endpoint=apiendpoint_aad07092-4297-48f8-ae76-849cf549b192
 
 
 // loop - for every 'stateList' entry...;
