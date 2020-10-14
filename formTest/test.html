@@ -17,45 +17,271 @@
 	<body>
 		<!-- Form -->
 		<label for="userProvince">Choose your State, County, or City:</label>
-		<input type="text" list="userProvince" name="userProvince" />
+		<input id="userCity" type="text" list="userProvince" name="userProvince" />
 
 		<datalist id="userProvince" class="provinceDropdown">
 			<option value="test"></option>
 		</datalist>
+		<button id="userSubmit" type="submit">Submit</button>
 		<!-- /Form -->
 	</body>
 
 	<!-- JQuery Code -->
 	<script>
-		// Covid-19 API via rapidAPI;
-		const settings = {
-			async: true,
-			crossDomain: true,
-			url: "https://rapidapi.p.rapidapi.com/provinces?iso=USA",
-			method: "GET",
-			headers: {
-				"x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
-				"x-rapidapi-key": "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
+		var statesList = [
+			{
+				name: "Alabama",
+				abbreviation: "AL",
 			},
-		};
+			{
+				name: "Alaska",
+				abbreviation: "AK",
+			},
+			{
+				name: "Arizona",
+				abbreviation: "AZ",
+			},
+			{
+				name: "Arkansas",
+				abbreviation: "AR",
+			},
+			{
+				name: "California",
+				abbreviation: "CA",
+			},
+			{
+				name: "Colorado",
+				abbreviation: "CO",
+			},
+			{
+				name: "Connecticut",
+				abbreviation: "CT",
+			},
+			{
+				name: "Delaware",
+				abbreviation: "DE",
+			},
+			{
+				name: "District Of Columbia",
+				abbreviation: "DC",
+			},
+			{
+				name: "Florida",
+				abbreviation: "FL",
+			},
+			{
+				name: "Georgia",
+				abbreviation: "GA",
+			},
+			{
+				name: "Guam",
+				abbreviation: "GU",
+			},
+			{
+				name: "Hawaii",
+				abbreviation: "HI",
+			},
+			{
+				name: "Idaho",
+				abbreviation: "ID",
+			},
+			{
+				name: "Illinois",
+				abbreviation: "IL",
+			},
+			{
+				name: "Indiana",
+				abbreviation: "IN",
+			},
+			{
+				name: "Iowa",
+				abbreviation: "IA",
+			},
+			{
+				name: "Kansas",
+				abbreviation: "KS",
+			},
+			{
+				name: "Kentucky",
+				abbreviation: "KY",
+			},
+			{
+				name: "Louisiana",
+				abbreviation: "LA",
+			},
+			{
+				name: "Maine",
+				abbreviation: "ME",
+			},
+			{
+				name: "Maryland",
+				abbreviation: "MD",
+			},
+			{
+				name: "Massachusetts",
+				abbreviation: "MA",
+			},
+			{
+				name: "Michigan",
+				abbreviation: "MI",
+			},
+			{
+				name: "Minnesota",
+				abbreviation: "MN",
+			},
+			{
+				name: "Mississippi",
+				abbreviation: "MS",
+			},
+			{
+				name: "Missouri",
+				abbreviation: "MO",
+			},
+			{
+				name: "Montana",
+				abbreviation: "MT",
+			},
+			{
+				name: "Nebraska",
+				abbreviation: "NE",
+			},
+			{
+				name: "Nevada",
+				abbreviation: "NV",
+			},
+			{
+				name: "New Hampshire",
+				abbreviation: "NH",
+			},
+			{
+				name: "New Jersey",
+				abbreviation: "NJ",
+			},
+			{
+				name: "New Mexico",
+				abbreviation: "NM",
+			},
+			{
+				name: "New York",
+				abbreviation: "NY",
+			},
+			{
+				name: "North Carolina",
+				abbreviation: "NC",
+			},
+			{
+				name: "North Dakota",
+				abbreviation: "ND",
+			},
+			{
+				name: "Ohio",
+				abbreviation: "OH",
+			},
+			{
+				name: "Oklahoma",
+				abbreviation: "OK",
+			},
+			{
+				name: "Oregon",
+				abbreviation: "OR",
+			},
+			{
+				name: "Pennsylvania",
+				abbreviation: "PA",
+			},
+			{
+				name: "Puerto Rico",
+				abbreviation: "PR",
+			},
+			{
+				name: "Rhode Island",
+				abbreviation: "RI",
+			},
+			{
+				name: "South Carolina",
+				abbreviation: "SC",
+			},
+			{
+				name: "South Dakota",
+				abbreviation: "SD",
+			},
+			{
+				name: "Tennessee",
+				abbreviation: "TN",
+			},
+			{
+				name: "Texas",
+				abbreviation: "TX",
+			},
+			{
+				name: "Utah",
+				abbreviation: "UT",
+			},
+			{
+				name: "Vermont",
+				abbreviation: "VT",
+			},
+			{
+				name: "Virgin Islands",
+				abbreviation: "VI",
+			},
+			{
+				name: "Virginia",
+				abbreviation: "VA",
+			},
+			{
+				name: "Washington",
+				abbreviation: "WA",
+			},
+			{
+				name: "West Virginia",
+				abbreviation: "WV",
+			},
+			{
+				name: "Wisconsin",
+				abbreviation: "WI",
+			},
+			{
+				name: "Wyoming",
+				abbreviation: "WY",
+			},
+		];
 
-		// Ajax that rapidAPI included;
-		$.ajax(settings).done(function (response) {
-			//
-			// rrrossettiii's code
-			// - turn response into just an array;
-			var provinceData = response.data;
-			// loop - for every 'data' entry...;
-			for (i = 0; i < provinceData.length; i++) {
-				// - create option tag; apply the 'province' to the value of <option>; append option to datalist '.provinceDropdown';
-				var provinceOption = $("<option></option>");
-				provinceOption.attr("value", provinceData[i].province);
-				$(".provinceDropdown").append(provinceOption);
-			}
-			// /code
-			//
-		});
+		// loop - for every 'data' entry...;
+		for (i = 0; i < statesList.length; i++) {
+			// - create option tag; apply the 'province' to the value of <option>; append option to datalist '.provinceDropdown';
+			var provinceOption = $("<option></option>");
+			provinceOption.attr("value", statesList[i].name);
+			$(".provinceDropdown").append(provinceOption);
+		}
+		// /code
+		//
+
 		// /Ajax
+
+		$("#userSubmit").click(function () {
+			userChoice = $("#userCity").val();
+			console.log(userChoice);
+			const settings = {
+				async: true,
+				crossDomain: true,
+				url:
+					"https://rapidapi.p.rapidapi.com/reports?region_province=" +
+					encodeURIComponent(userChoice),
+				method: "GET",
+				headers: {
+					"x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
+					"x-rapidapi-key":
+						"07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
+				},
+			};
+
+			console.log(settings.url);
+
+			$.ajax(settings).done(function (response) {
+				console.log(response.data);
+			});
+		});
 	</script>
 </html>
 <!--  -->
