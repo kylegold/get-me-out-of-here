@@ -54,7 +54,7 @@ function browseRoutes(){
 	var locale = 'en-US'
 	var originPlace = airportList[0].code
 	console.log(originPlace);
-	var destinationPlace = 'TIJ';
+	var destinationPlace = 'JFK';
 	var userOutDate = convertDate(todaysDate);
 	console.log(userOutDate);
 	const settings = {
@@ -67,7 +67,7 @@ function browseRoutes(){
 			"x-rapidapi-key": "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a"
 		}
 	};
-	
+	console.log(settings.url);
 	$.ajax(settings).done(function (response) {
 		console.log(response);
 	});
