@@ -27,8 +27,7 @@ $("#userState").on("change", function () {
     method: "GET",
     headers: {
       "x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
-      "x-rapidapi-key":
-        "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
+      "x-rapidapi-key": "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
     },
   };
 var userReport;
@@ -59,9 +58,7 @@ var userReport;
           userReport = citiesData[i];
           findDistanceTo(userReport)
           report = $("<h1>")
-            .text(
-              userReport.name + " confirmed cases: " + userReport.confirmed
-            )
+            .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
           $("body").append(report);
         }
@@ -76,6 +73,7 @@ var userReport;
 
 // User looks at returned results and chooses
 
+// We need to take testResults value (string) and compare it to Total Report.Data.Confirmed
 // We need to take testResults value (string) and compare it to Total Report.Data.Confirmed
 // ---------------------------------------------------------------------------------------------------------------
 // <!-- Get user State information -->
