@@ -4,7 +4,7 @@ function initMap(userReport) {
   const directionsService = new google.maps.DirectionsService();
   // initialize google map opject at the map id div .. setting initial position to center of usa
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 8,
+    zoom: 5,
     center: { lat: 39.8283, lng: -98.5795 },
   });
   directionsRenderer.setMap(map);
