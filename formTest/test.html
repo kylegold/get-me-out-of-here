@@ -88,12 +88,22 @@
     </div>
     <!-- close bulma css dropdown-->
     <br />
-    <!-- Form -->
-    <label for="userCity">Choose your City:</label>
-    <select name="userCity" id="userCity" class="cityDropdown"></select>
-    <button class="btn btn-outline-primary" type="button" id="submit-btn">
-      Submit
-    </button>
+    <!-- bulma css dropdown-->
+    <div class="control">
+      <div class="select">
+        <!-- Form -->
+        <label for="userCity">Choose your City:</label>
+        <select name="userCity" id="userCity" class="cityDropdown"></select>
+      </div>
+    </div>
+    <!-- close bulma css dropdown-->
+    <!-- bulma css submit button-->
+    <div class="control">
+      <button class="btn is-outline-primary" type="button" id="submit-btn">
+        Submit
+      </button>
+    </div>
+    <!-- close bulma submit button -->
     <!--  -->
     <div id="floating-panel">
       <b>Mode of Travel: </b>
@@ -104,6 +114,10 @@
         <option value="TRANSIT">Transit</option>
       </select>
     </div>
-    <div id="map"></div>
+    <!-- bulma container class-->
+    <div class="container is-fluid">
+      <div id="map"></div>
+    </div>
+    <!-- bulma container class -->
   </body>
 </html>
