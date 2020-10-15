@@ -17,22 +17,29 @@
     <!-- State List -->
     <script defer src="stateList.js"></script>
 
-    <!-- Covid API -->
-    <script defer src="covidAPI.js"></script>
-  </head>
-  <body>
-    <!-- Form -->
-    <label for="userState">Choose your State:</label>
-    <select name="userState" id="userState" class="stateDropdown">
-      <option value="blank">*State*</option>
-    </select>
-    <!-- /Form -->
-    <br />
-    <!-- Form -->
-    <label for="userCity">Choose your City:</label>
-    <select name="userCity" id="userCity" class="cityDropdown"></select>
-    <button class="btn btn-outline-primary" type="button" id="submit-btn">
-      Submit
-    </button>
-  </body>
+
+		<!-- Covid API -->
+		<script defer src="covidAPI.js"></script>
+
+		<!-- Airport List -->
+		<script defer src="airportList.js"></script>
+
+		<!-- Distance -->
+		<script defer src="distance.js"></script>
+	</head>
+	<body>
+		<!-- Form -->
+		<label for="userState">Choose your State:</label>
+		<select name="userState" id="userState" class="stateDropdown">
+			<option value="blank">*State*</option>
+		</select>
+		<!-- /Form -->
+		<br />
+		<!-- Form -->
+		<label for="userCity">Choose your City:</label>
+		<select name="userCity" id="userCity" class="cityDropdown"></select>
+		<button class="btn btn-outline-primary" type="button" id="submit-btn">
+			Submit
+		</button>
+	</body>
 </html>
