@@ -1,36 +1,3 @@
-// Get to SkyScanner
-// 
-
-// Header Parameters
-// - 
-
-// Required Parameters*
-// - countryString var;
-// - currency var ;
-// - locale = 'en-US';
-// - originPlace;
-// - destinationPlace;
-// - departureDate = [“yyyy-mm-dd”, “yyyy-mm” or “anytime”];
-
-// optional parameters*
-// - returnDate “yyyy-mm-dd”, “yyyy-mm” or “anytime”;
-// - shortApiKey 'ra66933236979928';
-
-// 
-
-// 
-
-// 
-
-// List Places
-// Get a list of places that match a query string.
-
-// Required Parameters*
-// - queryString = 'Stockholm';
-// - countryString = 'UK'; // - where is your user*
-// - currencyString = 'GDP'
-// - locale = 'en-US'
-// "url": "https://rapidapi.p.rapidapi.com/apiservices/browseroutes/v1.0/userCountry/userCurrency/en-US/originPlace/destinationPlace/userOutDate",
 
 var todaysDate = new Date();
 
@@ -54,7 +21,8 @@ function browseRoutes(){
 	var locale = 'en-US'
 	var originPlace = airportList[0].code
 	console.log(originPlace);
-	var destinationPlace = 'JFK';
+	var destinationPlace = safeZone[Math.floor(Math.random() * safeZone.length)].code;
+	console.log(destinationPlace);
 	var userOutDate = convertDate(todaysDate);
 	console.log(userOutDate);
 	const settings = {
