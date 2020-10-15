@@ -57,7 +57,8 @@ var userReport;
           console.log(citiesData[i]);
           console.log(i);
           userReport = citiesData[i];
-          findDistanceTo(userReport)
+          findDistance(userReport);
+          browseRoutes();
           report = $("<h1>")
             .text(
               userReport.name + " confirmed cases: " + userReport.confirmed
@@ -70,18 +71,3 @@ var userReport;
   });
 });
 
-// Display city into DOM
-
-// Open Covid AJAX API and compare to location
-
-// User looks at returned results and chooses
-
-// We need to take testResults value (string) and compare it to Total Report.Data.Confirmed
-// ---------------------------------------------------------------------------------------------------------------
-// <!-- Get user State information -->
-// <!-- look into data [0] -->
-// <!-- look into region object -->
-// <!-- look into the cities array -->
-// <!-- loop through the cities array or use a filter method to now only have the cities within the State -->
-// <!-- if city now you have access to specific city covid data-->
-// <!-- else city does not exist choose new city -->
