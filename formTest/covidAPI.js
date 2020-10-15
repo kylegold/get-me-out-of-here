@@ -27,8 +27,7 @@ $("#userState").on("change", function () {
     method: "GET",
     headers: {
       "x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
-      "x-rapidapi-key":
-        "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
+      "x-rapidapi-key": "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
     },
   };
 var userReport;
@@ -60,9 +59,7 @@ var userReport;
           findDistance(userReport);
           browseRoutes();
           report = $("<h1>")
-            .text(
-              userReport.name + " confirmed cases: " + userReport.confirmed
-            )
+            .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
           $("body").append(report);
         }
@@ -71,3 +68,22 @@ var userReport;
   });
 });
 
+<<<<<<< HEAD
+=======
+// Display city into DOM
+
+// Open Covid AJAX API and compare to location
+
+// User looks at returned results and chooses
+
+// We need to take testResults value (string) and compare it to Total Report.Data.Confirmed
+// We need to take testResults value (string) and compare it to Total Report.Data.Confirmed
+// ---------------------------------------------------------------------------------------------------------------
+// <!-- Get user State information -->
+// <!-- look into data [0] -->
+// <!-- look into region object -->
+// <!-- look into the cities array -->
+// <!-- loop through the cities array or use a filter method to now only have the cities within the State -->
+// <!-- if city now you have access to specific city covid data-->
+// <!-- else city does not exist choose new city -->
+>>>>>>> b56a8976b6b88ab002045be64f07c30d6cea5fc4
