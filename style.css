@@ -80,25 +80,20 @@ THIS IS FOR THE OTHER DROPDOWN ON THE FORM
   </div>
 </div>
 
-// THIS IS HOW WE CAN HAVE THE FORM SETUP SO THAT IT WILL STACK VERTICALLY//
-<fieldset>
-  
-<div class="field">
-  <label class="label">Name</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="e.g Alex Smith">
+/
+
+
+<section class="hero is-medium is-primary is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Primary bold title
+      </h1>
+      <h2 class="subtitle">
+        Primary bold subtitle
+      </h2>
+    </div>
   </div>
-</div>
-
-<div class="field">
-  <label class="label">Email</label>
-  <div class="control">
-    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
-  </div>
-</div>
-
-</fieldset>
-
-
+</section>
 
 */
