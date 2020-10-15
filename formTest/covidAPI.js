@@ -57,7 +57,7 @@ var userReport;
           console.log(i);
           userReport = citiesData[i];
           findDistance(userReport);
-          browseRoutes();
+          // browseRoutes();
           initMap(userReport)
           // map needs to be called from this click event
           report = $("<h1>")
