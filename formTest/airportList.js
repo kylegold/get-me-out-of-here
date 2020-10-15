@@ -86,8 +86,8 @@ var airportList = [
     {
         name: 'Nogales International Airport',
         code: 'OLS',
-        lat: 31.2261,
-        long: -110.9741,
+        lat: 31.417778,
+        long: -110.847778,
         cur: 'MXN',
     },
     {
