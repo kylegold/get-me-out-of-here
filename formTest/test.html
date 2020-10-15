@@ -47,7 +47,7 @@
       /* Always set the map height explicitly to define the size of the div
 		 * element that contains the map. */
       #map {
-		height: 60%;
+		height: 100%;
 		width: 600px;
         margin-top: 70px;
       }
@@ -73,7 +73,43 @@
         font-family: "Roboto", "sans-serif";
         line-height: 30px;
         padding-left: 10px;
-      }
+	  }
+	  #right-panel {
+  font-family: "Roboto", "sans-serif";
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+#right-panel select,
+#right-panel input {
+  font-size: 15px;
+}
+
+#right-panel select {
+  width: 100%;
+}
+
+#right-panel i {
+  font-size: 12px;
+}
+
+#right-panel {
+  height: 100%;
+  float: right;
+  width: 390px;
+  overflow: auto;
+}
+@media print {
+  #map {
+    height: 500px;
+    margin: 0;
+  }
+
+  #right-panel {
+    float: none;
+	width: auto;
+  }
+}
     </style>
   </head>
   <body>
@@ -118,7 +154,10 @@
     </div>
     <!-- bulma container class-->
     <!-- <div class="container is-fluid"> -->
-      <div id="map" style="margin-left: auto; margin-right: auto;"></div>
+		<div class="mapContainter" style="height: 600px">
+		<div id="right-panel"></div>
+	  <div id="map" style="margin-left: auto; margin-right: auto;"></div>
+	  </div>
     <!-- </div> -->
 	<!-- bulma container class -->
 	<h2 id="startLocation" style="text-align: center;"></h2>
