@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
 
     <!-- Bulma -->
     <!-- <link
@@ -11,12 +11,12 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     /> -->
 
-		<!-- JQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-		<!-- State List -->
-		<script defer src="stateList.js"></script>
-		
+    <!-- State List -->
+    <script defer src="stateList.js"></script>
+
     <!-- Covid API -->
     <script defer src="covidAPI.js"></script>
 
@@ -26,13 +26,11 @@
     <!-- Distance -->
     <script defer src="distance.js"></script>
 
-
-		<!-- Sky Scanner -->
-	<script defer src="skyScannerAPI.js"></script>
+    <!-- Sky Scanner -->
+    <script defer src="skyScannerAPI.js"></script>
 
     <!-- Google -->
     <script defer src="googleMaps.js"></script>
-
 
     <!-- Google Routes API -->
     <script
@@ -47,8 +45,8 @@
       /* Always set the map height explicitly to define the size of the div
 		 * element that contains the map. */
       #map {
-		height: 100%;
-		width: 600px;
+        height: 60%;
+        width: 600px;
         margin-top: 70px;
       }
 
@@ -57,8 +55,8 @@
       body {
         height: 100%;
         margin: 0;
-		padding: 0;
-		margin: 10px;
+        padding: 0;
+        margin: 10px;
       }
 
       #floating-panel {
@@ -73,56 +71,20 @@
         font-family: "Roboto", "sans-serif";
         line-height: 30px;
         padding-left: 10px;
-	  }
-	  #right-panel {
-  font-family: "Roboto", "sans-serif";
-  line-height: 30px;
-  padding-left: 10px;
-}
-
-#right-panel select,
-#right-panel input {
-  font-size: 15px;
-}
-
-#right-panel select {
-  width: 100%;
-}
-
-#right-panel i {
-  font-size: 12px;
-}
-
-#right-panel {
-  height: 100%;
-  float: left;
-  width: 390px;
-  overflow: auto;
-}
-@media print {
-  #map {
-    height: 500px;
-    margin: 0;
-  }
-
-  #right-panel {
-    float: none;
-	width: auto;
-  }
-}
+      }
     </style>
   </head>
   <body>
     <!-- bulma css dropdown-->
     <!-- <div class="control">
       <div class="select"> -->
-        <!-- Form -->
-        <label for="userState">Choose your State:</label>
-        <select name="userState" id="userState" class="stateDropdown">
-          <option value="blank">*State*</option>
-        </select>
-        <!-- /Form -->
-      <!-- </div>
+    <!-- Form -->
+    <label for="userState">Choose your State:</label>
+    <select name="userState" id="userState" class="stateDropdown">
+      <option value="blank">*State*</option>
+    </select>
+    <!-- /Form -->
+    <!-- </div>
     </div> -->
     <!-- close bulma css dropdown-->
     <!-- <br /> -->
@@ -143,27 +105,25 @@
     </div>
     <!-- close bulma submit button -->
     <!--  -->
-
+    <div id="floating-panel">
+      <b>Mode of Travel: </b>
+      <select id="mode">
+        <option value="DRIVING">Driving</option>
+        <option value="WALKING">Walking</option>
+        <option value="BICYCLING">Bicycling</option>
+        <option value="TRANSIT">Transit</option>
+      </select>
+    </div>
     <!-- bulma container class-->
     <!-- <div class="container is-fluid"> -->
-		<div class="mapContainter" style="height: 600px; width: 100%; position: relative;">
-		<div id="right-panel"></div>
-	  <div id="map" ></div>
-	  <div id="floating-panel" style="position: absolute">
-		<b>Mode of Travel: </b>
-		<select id="mode">
-		  <option value="DRIVING">Driving</option>
-		  <option value="WALKING">Walking</option>
-		  <option value="BICYCLING">Bicycling</option>
-		  <option value="TRANSIT">Transit</option>
-		</select>
-	  </div>
-	  </div>
+
+    <div id="map" style="margin-left: auto; margin-right: auto"></div>
+
     <!-- </div> -->
-	<!-- bulma container class -->
-	<h2 id="startLocation" style="text-align: center;"></h2>
-	<h2 id="endLocation" style="text-align: center;"></h2>
-	<h2 id="directionsDuration" style="text-align: center;"></h2>
-	<h2 id="directionsDistance" style="text-align: center;"></h2>
+    <!-- bulma container class -->
+    <h2 id="startLocation" style="text-align: center"></h2>
+    <h2 id="endLocation" style="text-align: center"></h2>
+    <h2 id="directionsDuration" style="text-align: center"></h2>
+    <h2 id="directionsDistance" style="text-align: center"></h2>
   </body>
 </html>
