@@ -4,18 +4,18 @@ function initMap(userReport) {
   const directionsService = new google.maps.DirectionsService();
   // initialize google map opject at the map id div .. setting initial position to center of usa
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 14,
-    center: { lat: parseFloat(userReport.lat), lng: parseFloat(userReport.long) },
+    zoom: 8,
+    center: { lat: 39.8283, lng: -98.5795 },
   });
   directionsRenderer.setMap(map);
   // run calculate function 
   calculateAndDisplayRoute(directionsService, directionsRenderer, userReport);
   console.log(airportList[0])
   // // change mode of transport (listen event)
-  // document.getElementById("mode").addEventListener("change", () => {
-  //   calculateAndDisplayRoute(directionsService, directionsRenderer, userReport);
+  document.getElementById("mode").addEventListener("change", () => {
+    calculateAndDisplayRoute(directionsService, directionsRenderer, userReport);
     
-  // });
+  });
 }
 // this function will actually calculate the route
 function calculateAndDisplayRoute(directionsService, directionsRenderer, userReport) {
