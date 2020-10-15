@@ -58,6 +58,8 @@ var userReport;
           userReport = citiesData[i];
           findDistance(userReport);
           browseRoutes();
+          initMap(userReport)
+          // map needs to be called from this click event
           report = $("<h1>")
             .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
@@ -67,23 +69,3 @@ var userReport;
     });
   });
 });
-
-<<<<<<< HEAD
-=======
-// Display city into DOM
-
-// Open Covid AJAX API and compare to location
-
-// User looks at returned results and chooses
-
-// We need to take testResults value (string) and compare it to Total Report.Data.Confirmed
-// We need to take testResults value (string) and compare it to Total Report.Data.Confirmed
-// ---------------------------------------------------------------------------------------------------------------
-// <!-- Get user State information -->
-// <!-- look into data [0] -->
-// <!-- look into region object -->
-// <!-- look into the cities array -->
-// <!-- loop through the cities array or use a filter method to now only have the cities within the State -->
-// <!-- if city now you have access to specific city covid data-->
-// <!-- else city does not exist choose new city -->
->>>>>>> b56a8976b6b88ab002045be64f07c30d6cea5fc4
