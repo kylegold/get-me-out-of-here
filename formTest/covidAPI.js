@@ -57,6 +57,8 @@ var userReport;
           console.log(i);
           userReport = citiesData[i];
           findDistanceTo(userReport)
+          initMap(userReport)
+          // map needs to be called from this click event
           report = $("<h1>")
             .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
