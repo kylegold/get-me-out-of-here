@@ -7,7 +7,11 @@ function initMap(userReport) {
     zoom: 5,
     center: { lat: 39.8283, lng: -98.5795 },
   });
+  // render directions on map
   directionsRenderer.setMap(map);
+  // render steps in side panel
+  directionsRenderer.setPanel(document.getElementById("right-panel"));
+ 
   // run calculate function 
   calculateAndDisplayRoute(directionsService, directionsRenderer, userReport);
   console.log(airportList[0])
