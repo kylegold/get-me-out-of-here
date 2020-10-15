@@ -1,0 +1,92 @@
+var airportList = [
+    {
+        name: 'Toronto Pearson International Airport',
+        code: 'YYZ',
+        lat: 43.676667,
+        long: -79.630556,
+    },
+    {
+        name: 'Ottawa International Airport',
+        code: 'YOW',
+        lat: 45.3225,
+        long: -75.667222,
+    },
+    {
+        name: 'Vancouver International Airport',
+        code: 'YVR',
+        lat: 49.194722,
+        long: -123.183889,
+    },
+    {
+        name: 'Calgary International Airport',
+        code: 'YYC',
+        lat: 51.1225,
+        long: -114.013333,
+    },
+    {
+        name: 'Winnipeg International Airport',
+        code: 'YWG',
+        lat: 49.91,
+        long: -97.24,
+    },
+    {
+        name: 'Thunder Bay International Airport',
+        code: 'YQT',
+        lat: 48.371944,
+        long: -89.321667,
+    },
+    {
+        name: 'Windsor International Airport',
+        code: 'YQG',
+        lat: 42.276111,
+        long: -82.955278,
+    },
+    {
+        name: 'Montréal International Airport',
+        code: 'YUL',
+        lat: 45.470556,
+        long: -73.740833,
+    },
+    {
+        name: 'Québec International Airport',
+        code: 'YQB',
+        lat: 46.791111,
+        long: -71.393333,
+    },
+    {
+        name: 'Nuevo Laredo International Airport',
+        code: 'NLD',
+        lat: 27.443889,
+        long:  -99.570556,
+    },
+    {
+        name: 'Piedras Negras International',
+        code: 'PDS',
+        lat: 28.6275,
+        long: -100.535278,
+    },
+    {
+        name: 'Ciudad Juarez International',
+        code: 'CJS',
+        lat: 31.636389,
+        long: -106.428611,
+    },
+    {
+        name: 'Nogales International Airport',
+        code: 'OLS',
+        lat: 31.417778,
+        long: -110.847778,
+    },
+    {
+        name: 'Tijuana International Airport',
+        code: 'TIJ',
+        lat: 32.540833,
+        long: -116.97,
+    },
+    {
+        name: 'Matamoros International Airport',
+        code: 'MAM',
+        lat: 25.77,
+        long: -97.525278,
+    },
+]

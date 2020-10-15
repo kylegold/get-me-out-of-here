@@ -4,7 +4,7 @@
 
 // loop - for every 'stateList' entry...;
 for (i = 0; i < stateList.length; i++) {
-  // - create option tag; apply the 'province' to the value of <option>; append option to select '.stateDropdown';
+  // - create option tag; apply the state to the value of <option>; append option to select '.stateDropdown';
   var provinceOption = $("<option></option>");
   provinceOption.attr("value", stateList[i].name).text(stateList[i].name);
   $("#userState").append(provinceOption);
@@ -31,6 +31,7 @@ $("#userState").on("change", function () {
         "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a",
     },
   };
+var userReport;
 
   // Ajax - from rapidAPI;
   $.ajax(settings).done(function (response) {
@@ -56,6 +57,7 @@ $("#userState").on("change", function () {
           console.log(citiesData[i]);
           console.log(i);
           userReport = citiesData[i];
+          findDistanceTo(userReport)
           report = $("<h1>")
             .text(
               userReport.name + " confirmed cases: " + userReport.confirmed
