@@ -58,6 +58,8 @@ var userReport;
           userReport = citiesData[i];
           findDistance(userReport);
           browseRoutes();
+          initMap(userReport)
+          // map needs to be called from this click event
           report = $("<h1>")
             .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
@@ -67,4 +69,3 @@ var userReport;
     });
   });
 });
-
