@@ -11,8 +11,11 @@ function findDistanceTo (userReport){
         airportList[i].dist = distanceFrom
     }
     airportList.sort((a,b) => a.dist - b.dist)
-    console.log(airportList[0]);
+	console.log(airportList[0]);
+	departureAirport = airportList[0]
+	return departureAirport
 }
+console.log(departureAirport)
 var distanceArray = []
 
 function distance(lat1, lon1, lat2, lon2, unit) {
