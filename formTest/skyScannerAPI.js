@@ -54,7 +54,7 @@ function browseRoutes(){
 	var locale = 'en-US'
 	var originPlace = airportList[0].code
 	console.log(originPlace);
-	var destinationPlace = 'TIJ';
+	var destinationPlace = 'AKL';
 	var userOutDate = convertDate(todaysDate);
 	console.log(userOutDate);
 	const settings = {
@@ -64,7 +64,7 @@ function browseRoutes(){
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-			"x-rapidapi-key": "07058048ffmshe16787ad7b4eeffp1c88f9jsn4040b743a04a"
+			"x-rapidapi-key": "4ddfa0ddd8mshc80ad8ca9e9c972p19ec1bjsn3d5ff1634bdc"
 		}
 	};
 	

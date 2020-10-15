@@ -57,10 +57,10 @@ var userReport;
           console.log(i);
           userReport = citiesData[i];
           findDistance(userReport);
-          // browseRoutes();
+          browseRoutes();
           initMap(userReport)
           // map needs to be called from this click event
-          report = $("<h1>")
+          report = $("<h1>").css('text-align', 'center')
             .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
           $("body").append(report);
