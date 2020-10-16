@@ -1,129 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Document</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Document</title>
 
-    <!-- Bulma -->
-    <!-- <link
+		<!-- Bulma -->
+		<!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     /> -->
 
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- State List -->
-    <script defer src="stateList.js"></script>
+		<!-- State List -->
+		<script defer src="stateList.js"></script>
 
-    <!-- Covid API -->
-    <script defer src="covidAPI.js"></script>
+		<!-- Covid API -->
+		<script defer src="covidAPI.js"></script>
 
-    <!-- Airport List -->
-    <script defer src="airportList.js"></script>
+		<!-- Airport List -->
+		<script defer src="airportList.js"></script>
 
-    <!-- Distance -->
-    <script defer src="distance.js"></script>
+		<!-- Distance -->
+		<script defer src="distance.js"></script>
 
-    <!-- Sky Scanner -->
-    <script defer src="skyScannerAPI.js"></script>
+		<!-- Sky Scanner -->
+		<script defer src="skyScannerAPI.js"></script>
 
-    <!-- Google -->
-    <script defer src="googleMaps.js"></script>
+		<!-- Google -->
+		<script defer src="googleMaps.js"></script>
 
-    <!-- Google Routes API -->
-    <script
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKaxFtBU09rw9rIwObgc2jWGXMLp_VTEY&callback=initMap"
-    ></script>
-    <script
-      defer
-      src="https://polyfill.io/v3/polyfill.min.js?features=default"
-    ></script>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
+		<!-- Google Routes API -->
+		<script
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKaxFtBU09rw9rIwObgc2jWGXMLp_VTEY&callback=initMap"
+		></script>
+		<script
+			defer
+			src="https://polyfill.io/v3/polyfill.min.js?features=default"
+		></script>
+		<style>
+			/* Always set the map height explicitly to define the size of the div
 		 * element that contains the map. */
-      #map {
-        height: 60%;
-        width: 600px;
-        margin-top: 70px;
-      }
+			#map {
+				height: 60%;
+				width: 600px;
+				margin-top: 70px;
+			}
 
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        margin: 10px;
-      }
+			/* Optional: Makes the sample page fill the window. */
+			html,
+			body {
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				margin: 10px;
+			}
 
-      #floating-panel {
-        position: absolute;
-        top: 10px;
-        left: 25%;
-        z-index: 5;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #999;
-        text-align: center;
-        font-family: "Roboto", "sans-serif";
-        line-height: 30px;
-        padding-left: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- bulma css dropdown-->
-    <!-- <div class="control">
+			#floating-panel {
+				position: absolute;
+				top: 10px;
+				left: 25%;
+				z-index: 5;
+				background-color: #fff;
+				padding: 5px;
+				border: 1px solid #999;
+				text-align: center;
+				font-family: "Roboto", "sans-serif";
+				line-height: 30px;
+				padding-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- bulma css dropdown-->
+		<!-- <div class="control">
       <div class="select"> -->
-    <!-- Form -->
-    <label for="userState">Choose your State:</label>
-    <select name="userState" id="userState" class="stateDropdown">
-      <option value="blank">*State*</option>
-    </select>
-    <!-- /Form -->
-    <!-- </div>
+		<!-- Form -->
+		<label for="userState">Choose your State:</label>
+		<select name="userState" id="userState" class="stateDropdown">
+			<option value="blank">*State*</option>
+		</select>
+		<!-- /Form -->
+		<!-- </div>
     </div> -->
-    <!-- close bulma css dropdown-->
-    <!-- <br /> -->
-    <!-- bulma css dropdown-->
-    <div class="control">
-      <div class="select">
-        <!-- Form -->
-        <label for="userCity">Choose your City:</label>
-        <select name="userCity" id="userCity" class="cityDropdown"></select>
-      </div>
-    </div>
-    <!-- close bulma css dropdown-->
-    <!-- bulma css submit button-->
-    <div class="control">
-      <button class="btn is-outline-primary" type="button" id="submit-btn">
-        Submit
-      </button>
-    </div>
-    <!-- close bulma submit button -->
-    <!--  -->
-    <div id="floating-panel">
-      <b>Mode of Travel: </b>
-      <select id="mode">
-        <option value="DRIVING">Driving</option>
-        <option value="WALKING">Walking</option>
-        <option value="BICYCLING">Bicycling</option>
-        <option value="TRANSIT">Transit</option>
-      </select>
-    </div>
-    <!-- bulma container class-->
-    <!-- <div class="container is-fluid"> -->
+		<!-- close bulma css dropdown-->
+		<!-- <br /> -->
+		<!-- bulma css dropdown-->
+		<div class="control">
+			<div class="select">
+				<!-- Form -->
+				<label for="userCity">Choose your City:</label>
+				<select name="userCity" id="userCity" class="cityDropdown"></select>
+			</div>
+		</div>
+		<!-- close bulma css dropdown-->
+		<!-- bulma css submit button-->
+		<div class="control">
+			<button class="btn is-outline-primary" type="button" id="submit-btn">
+				Submit
+			</button>
+		</div>
+		<!-- close bulma submit button -->
+		<!--  -->
+		<div id="floating-panel">
+			<b>Mode of Travel: </b>
+			<select id="mode">
+				<option value="DRIVING">Driving</option>
+				<option value="WALKING">Walking</option>
+				<option value="BICYCLING">Bicycling</option>
+				<option value="TRANSIT">Transit</option>
+			</select>
+		</div>
+		<!-- bulma container class-->
+		<!-- <div class="container is-fluid"> -->
 
-    <div id="map" style="margin-left: auto; margin-right: auto"></div>
+		<div id="map" style="margin-left: auto; margin-right: auto"></div>
 
-    <!-- </div> -->
-    <!-- bulma container class -->
-    <h2 id="startLocation" style="text-align: center"></h2>
-    <h2 id="endLocation" style="text-align: center"></h2>
-    <h2 id="directionsDuration" style="text-align: center"></h2>
-    <h2 id="directionsDistance" style="text-align: center"></h2>
-  </body>
+		<!-- </div> -->
+		<!-- bulma container class -->
+		<h2 id="startLocation" style="text-align: center"></h2>
+		<h2 id="endLocation" style="text-align: center"></h2>
+		<h2 id="directionsDuration" style="text-align: center"></h2>
+		<h2 id="directionsDistance" style="text-align: center"></h2>
+	</body>
 </html>
