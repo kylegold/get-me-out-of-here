@@ -37,11 +37,48 @@ function browseRoutes(){
 	};
 	console.log(settings.url);
 	$.ajax(settings).done(function (response) {
-		console.log(response.carrier[0].name);
-		console.log(response.Quotes);
-		flights = $("<h2>").css('text-align', 'center')
-            .text(userReport.name + " confirmed cases: " + userReport.confirmed)
-            .attr("id", "reportElement");
-          $("#covid-information").append(report);
+		console.log(response);
+		console.log(response.Quotes.length);
+		console.log(response.Quotes[0].OutboundLeg.CarrierIds[0])
+		for (var i = 0 ; i < response.Quotes.length ; i++) {
+			console.log(response.Quotes[i].OutboundLeg.CarrierIds[0])
+			var responseCarrierId = response.Quotes[i].OutboundLeg.CarrierIds[0].toString();
+			var responseMinPrice = response.Quotes[i].MinPrice
+			var responseDepartureDate = response.Quotes[i].OutboundLeg.DepartureDate
+			var flightOverview = $('<h3>')
+			$(flightOverview).text("Flight Information: ")
+			$("#skyscanner").append(flightOverview);
+			var carrierId = $('<h4>')
+			$(carrierId).text("Carrier Id: " + responseCarrierId)
+			$("#skyscanner").append(carrierId);
+			
+			response.Carriers.forEach(carrier => {
+				console.log(carrier)
+				if(response.Quotes[i].OutboundLeg.CarrierIds[0] === carrier.CarrierId){
+				var airlineName = $('<h4>')
+			$(airlineName).text("Airline Name: " + carrier.Name)
+			$("#skyscanner").append(airlineName);
+			response.Places.forEach(place => {
+				console.log(place)
+				var destinationLocation = $('<h4>')
+			$(destinationLocation).text("Flight Route: " + place.CityName + ", " + place.CountryName + " | " + place.Name + ", " + place.SkyscannerCode)
+			$("#skyscanner").append(destinationLocation);
+			});
+				}
+				else {
+					console.log("no flights available")
+				}
+			});
+
+
+			var minimumPrice = $('<h4>')
+			$(minimumPrice).text("Minimum Price: (" + response.Currencies[0].Code + ") " + responseMinPrice)
+			$("#skyscanner").append(minimumPrice);
+			var departureDate = $('<h4>')
+			$(departureDate).text("Departure Date: " + responseDepartureDate)
+			$("#skyscanner").append(departureDate);
+		
+		}
+		
 	});
 }
