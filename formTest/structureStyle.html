@@ -16,6 +16,13 @@
     <!-- Airport List -->
     <script defer src="airportList.js"></script>
 
+    <!-- Bulma -->
+    <!-- Bulma -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+
     <!-- Distance -->
     <script defer src="distance.js"></script>
 
@@ -104,18 +111,18 @@
     </style>
   </head>
   <body>
-    <header style="width: 100%; height: auto; border: 1px solid black" ;>
+    <header style="width: 100%; height: auto" ;>
       <h1 style="text-align: center">Get Me Out of Here</h1>
       <img
         style="
           display: block;
           margin-left: auto;
           margin-right: auto;
-          width: 50px;
-          height: 50px;
+          height: 1%;
+          width: auto;
         "
-        src="https://images.unsplash.com/photo-1601758002677-3aadb781fddd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-        alt="Illustration of girl running from germs"
+        src="Untitled_Artwork 3 (1).png"
+        alt="Illustration of girl running from Covid"
       />
     </header>
     <div
@@ -125,44 +132,47 @@
         justify-content: space-between;
         width: 90%;
         height: auto;
-        border: 1px solid black;
+
       "
       id="user-location-container"
     >
     
       <div
-        style="height: 100px; width: 350px; background-color: coral"
+        style="height: 100px; width: 350px; background-color: #DBB288; border-radius: 3em;"
         id="state-location-dropdown"
       >
       <div class="control" >
-        <div class="select" style="width: 175px; margin: 40px auto 0px auto">
+        <div class="select" style="width: 175px; margin: 1em 2em 2em 2em">
           <!-- Form -->
           <label for="userState">Choose your State:</label>
-          <select name="userState" id="userState" class="stateDropdown"></select>
-          <option value="blank">*State*</option>
+          <select name="userState" id="userState" class="stateDropdown">
+            <option value="blank">*State*</option>
+            </select>
         </div>
       </div>
     </div>
 
       <div
-        style="height: 100px; width: 350px; background-color: cadetblue"
+        style="height: 100px; width: 350px; background-color: #c49a74; border-radius: 3em"
         id="city-location-dropdown"
       >
     <div class="control" >
-        <div class="select" style="width: 175px; margin: 40px auto 0px auto">
+        <div class="select" style="width: 175px; margin: 1em 2em 2em 2em">
           <!-- Form -->
-          <label for="userCity">Choose your City:</label>
-          <select name="userCity" id="userCity" class="cityDropdown"></select>
+          <label for="userCity">Choose your County:</label>
+          <select name="userCity" id="userCity" class="cityDropdown">
+            <option value="blank">*County*</option>
+          </select>
         </div>
       </div>
     </div>
       <div
-        style="height: 100px; width: 350px; background-color: chartreuse"
+        style="height: 100px; width: 350px; background-color: #d28134; border-radius: 3em"
         id="submit-location"
       >
       <div class="control">
-        <button style="height: 40px; width: 150px; display: block; margin: 30px auto 0px auto" class="btn is-outline-primary" type="button" id="submit-btn">
-          Submit
+        <button style="height: 40px; width: 150px; display: block; margin: 30px auto 0px auto" class="button is-rounded" type="button" id="submit-btn">
+          ESCAPE
         </button>
       </div>
     </div>
@@ -190,29 +200,33 @@
         background-color: rgba(240, 240, 240, 0.75)
       "
       id="google-directions-container"
-    ><div
-        style="height: 100%; width: 350px; background-color: darkseagreen"
+    >
+    <div
+        style="height: 100%; width: 350px; background-color: #6c6c63"
         id="right-panel"
       ></div>
     
-    <div
-        style="height: 77%;"
-        id="map"
-      ></div>
-    <div id="floating-panel" style="position: absolute">
-      <b>Mode of Travel: </b>
-      <select id="mode">
-        <option value="DRIVING">Driving</option>
-        <option value="WALKING">Walking</option>
-        <option value="BICYCLING">Bicycling</option>
-        <option value="TRANSIT">Transit</option>
-      </select>
+      <div style="position: relative;">
+        <div
+            style="height: 77%;"
+            id="map"
+          >
+        </div>
+
+        <div id="floating-panel" style="position: absolute">
+          <b>Mode of Travel: </b>
+          <select id="mode">
+            <option value="DRIVING">Driving</option>
+            <option value="WALKING">Walking</option>
+            <option value="BICYCLING">Bicycling</option>
+            <option value="TRANSIT">Transit</option>
+          </select>
+        </div>
     </div>
 
        
        
     </div>
-    <h3 style="text-align: center;"> Congrats you little shit, you didn't die </h3> <!-- shit to be done on click -->
 ​
     <div
       style="
@@ -223,11 +237,9 @@
       "
       id="skyscanner"
     >
-      <h2>me0w</h2>
-      <h2>m#ow</h2>
     </div>
-    <footer style="width: 100%; height: auto; border: 1px solid black" ;>
-        <h4 style="text-align: center">Bitches get shit done.</h3>
-      </header>
+    <footer style="width: 100%; height: auto;" ;>
+      <h4 style="text-align: center">2020 &copy; GET ME OUT OF HERE</h3>
+      </footer>
   </body>
 </html>
