@@ -61,7 +61,7 @@ var userReport;
             .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
           $("#covid-information").append(report);
-        
+          // $('#success-message').text("You're city is infected. Don't worry we've found you a way out!")
            
         }
       }
