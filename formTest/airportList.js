@@ -86,8 +86,8 @@ var airportList = [
     {
         name: 'Nogales International Airport',
         code: 'OLS',
-        lat: 31.417778,
-        long: -110.847778,
+        lat: 31.226111,
+        long: -110.975833,
         cur: 'MXN',
     },
     {
@@ -106,41 +106,79 @@ var airportList = [
     },
 ]
 
-var safeZone = [
+var unsafeZone = [
     {
-        country: 'New Zealand',
-        name: 'Auckland Airport',
-        code: 'AKL',
-        lat: -37.008056,
-        long: 174.791667,
+        country: 'Belarus',
+        code: 'BY',
+        name: '',
+        lat: 0,
+        long: 0,
     },
     {
-      country: 'Thailand',
-      name: 'Suvarnabhumi Airport',
-      code: 'BKK',
-      lat: 13.6925,
-      long: 100.75, 
+        country: 'Serbia',
+        code: 'RS',
+        name: '',
+        lat: 0,
+        long: 0,
     },
     {
-        country: 'Greenland',
-        name: 'Kangerlussuaq Airport',
-        code: 'SFJ',
-        lat: 67.016944,
-        long: -50.689444, 
-      },
-      {
-        country: 'Fiji',
-        name: 'Nadi International Airport',
-        code: 'NAN',
-        lat: -17.755278,
-        long: 177.443333, 
-      },
-      {
-        country: 'Cayman Islands',
-        name: 'Owen Roberts International Airport',
-        code: 'GCM',
-        lat: 19.2925,
-        long:  -81.359167, 
-      },
+        country: 'Pakistan',
+        code: 'PK',
+        name: '',
+        lat: 0,
+        long: 0,
+    },
+    {
+        country: 'Somaila',
+        code: 'SO',
+        name: '',
+        lat: 0,
+        long: 0,
+    },
+    {
+        country: 'Kuwait',
+        code: 'KWI',
+        name: '',
+        lat: 0,
+        long: 0,
+    },
 ]
+
+// var safeZone = [
+//     {
+//         country: 'New Zealand',
+//         name: 'Auckland Airport',
+//         code: 'NZ',
+//         lat: -37.008056,
+//         long: 174.791667,
+//     },
+//     {
+//       country: 'Thailand',
+//       name: 'Suvarnabhumi Airport',
+//       code: 'BKKT',
+//       lat: 13.6925,
+//       long: 100.75, 
+//     },
+//     {
+//         country: 'Greenland',
+//         name: 'Kangerlussuaq Airport',
+//         code: 'GL',
+//         lat: 67.016944,
+//         long: -50.689444, 
+//       },
+//       {
+//         country: 'Fiji',
+//         name: 'Nadi International Airport',
+//         code: 'FJ',
+//         lat: -17.755278,
+//         long: 177.443333, 
+//       },
+//       {
+//         country: 'Cayman Islands',
+//         name: 'Owen Roberts International Airport',
+//         code: 'GCM',
+//         lat: 19.2925,
+//         long:  -81.359167, 
+//       },
+// ]
 

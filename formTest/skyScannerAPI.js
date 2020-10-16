@@ -21,7 +21,7 @@ function browseRoutes(){
 	var locale = 'en-US'
 	var originPlace = airportList[0].code
 	console.log(originPlace);
-	var destinationPlace = safeZone[Math.floor(Math.random() * safeZone.length)].code;
+	var destinationPlace = unsafeZone[Math.floor(Math.random() * unsafeZone.length)].code;
 	console.log(destinationPlace);
 	var userOutDate = convertDate(todaysDate);
 	console.log(userOutDate);

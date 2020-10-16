@@ -52,9 +52,6 @@ var userReport;
       // Loop - for every city listed; if the user choice matches a list entry...; 
       for (i = 0; i < citiesData.length; i++) {
         if (citiesData[i].name == userCityInput) {
-          console.log("works");
-          console.log(citiesData[i]);
-          console.log(i);
           userReport = citiesData[i];
           findDistance(userReport);
           browseRoutes();
