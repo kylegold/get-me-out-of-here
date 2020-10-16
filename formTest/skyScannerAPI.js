@@ -91,13 +91,13 @@ function browseRoutes(){
 				var airlineName = $('<h4>')
 			$(airlineName).text("Airline Name: " + carrier.Name)
 			$("#skyscanner").append(airlineName);
-			response.Places.forEach(place => {
-				console.log(place)
-				var destinationLocation = $('<h4>')
-			$(destinationLocation).text("Flight Route: " + place.CityName + ", " + place.CountryName + " | " + place.Name + ", " + place.SkyscannerCode)
-			$("#skyscanner").append(destinationLocation);
+			// response.Places.forEach(place => {
+			// 	console.log(place)
+			// 	var destinationLocation = $('<h4>')
+			// $(destinationLocation).text("Flight Route: " + place.CityName + ", " + place.CountryName + " | " + place.Name + ", " + place.SkyscannerCode)
+			// $("#skyscanner").append(destinationLocation);
 
-			});
+			// });
 				}
 				else {
 					console.log("no flights available")
@@ -111,7 +111,8 @@ function browseRoutes(){
 			var departureDate = $('<h4>')
 			$(departureDate).text("Departure Date: " + responseDepartureDate)
 			$("#skyscanner").append(departureDate);
-		
+			// var horizontalRule = $('<hr>');
+			// $('#skyscanner').append(horizontalRule);
 		}
 		
 	});
