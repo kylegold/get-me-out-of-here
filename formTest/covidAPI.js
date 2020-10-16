@@ -64,10 +64,8 @@ var userReport;
             .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
           $("#covid-information").append(report);
-          flights = $("<h2>").css('text-align', 'center')
-            .text(userReport.name + " confirmed cases: " + userReport.confirmed)
-            .attr("id", "reportElement");
-          $("#covid-information").append(report);
+        
+           
         }
       }
     });
