@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Container Style Set-Up</title>
+    <title>Get Me Out of Here</title>
     		<!-- JQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -48,7 +48,7 @@
         width: 600px;
         margin-top: 70px;
       }
-      
+
       /* Optional: Makes the sample page fill the window. */
       html,
       body {
@@ -110,17 +110,20 @@
     </style>
   </head>
   <body>
+
     <header style="width: 100%; height: auto" ;>
       <img
         style="
           display: block;
           margin-left: auto;
           margin-right: auto;
+
           height: 1%;
           width: auto;
         "
         src="assets/images/Untitled_Artwork 4.png"
         alt="Illustration of girl running from Covid"
+
       />
     </header>
     <div
@@ -130,7 +133,6 @@
         justify-content: space-between;
         width: 90%;
         height: auto;
-
       "
       id="user-location-container"
     >
@@ -151,6 +153,7 @@
     </div>
 
       <div
+
         style="height: 100px; width: 350px; background-color: #c49a74; border-radius: 3em"
         id="city-location-dropdown"
       >
@@ -161,6 +164,7 @@
           <select name="userCity" id="userCity" class="cityDropdown">
             <option value="blank">*County*</option>
           </select>
+
         </div>
       </div>
     </div>
@@ -201,45 +205,46 @@
         background-color: rgba(240, 240, 240, 0.75)
       "
       id="google-directions-container"
-    >
-    <div
-        style="height: 100%; width: 350px; background-color: #6c6c63"
+
+    ><div
+        style="height: 100%; width: 350px; background-color: darkseagreen"
         id="right-panel"
       ></div>
-    
-      <div style="position: relative;">
-        <div
-            style="height: 77%;"
-            id="map"
-          >
-        </div>
+    <div id="map-container" style="position: relative;">
 
-        <div id="floating-panel" style="position: absolute">
-          <b>Mode of Travel: </b>
-          <select id="mode">
-            <option value="DRIVING">Driving</option>
-            <option value="WALKING">Walking</option>
-            <option value="BICYCLING">Bicycling</option>
-            <option value="TRANSIT">Transit</option>
-          </select>
-        </div>
-      </div>
+    <div
+        style="height: 77%; "
+        id="map"
+      ></div>
+    <div id="floating-panel" style="position: absolute; top: 0">
+      <b>Mode of Travel: </b>
+      <select id="mode">
+        <option value="DRIVING">Driving</option>
+        <option value="WALKING">Walking</option>
+        <option value="BICYCLING">Bicycling</option>
+        <option value="TRANSIT">Transit</option>
+      </select>
     </div>
-​
-<h3 id="success-message" style="text-align: center;"> </h3> 
-
-<div
-  style="
-    margin: 10px auto 10px auto;
-    width: 60%;
-    height: auto;
-    border: 1px solid black;
-  "
-  id=“skyscanner”
->
 </div>
-    <footer style="width: 100%; height: auto; margin-bottom: 1em;" ;>
-      <h4 style="text-align: center">2020 &copy; GET ME OUT OF HERE</h3>
-      </footer>
+       
+       
+    </div>
+    <h3 id="success-message" style="text-align: center;"> </h3> <!-- shit to be done on click -->
+​
+    <div
+      style="
+        margin: 10px auto 10px auto;
+        width: 60%;
+        height: auto;
+        border: 1px solid black;
+      "
+      id="skyscanner"
+    >
+    </div>
+      
+    </div>
+    <footer style="width: 100%; height: auto; border: 1px solid black" ;>
+        <h4 style="text-align: center"> Copyright &#169</h3>
+      </header>
   </body>
 </html>
