@@ -64,7 +64,7 @@ function browseRoutes(){
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-			"x-rapidapi-key": "4ddfa0ddd8mshc80ad8ca9e9c972p19ec1bjsn3d5ff1634bdc"
+			"x-rapidapi-key": "3543b93140msha4191c8dc5001b0p1bab27jsn6c3cd4591044"
 		}
 	};
 	
@@ -73,6 +73,7 @@ function browseRoutes(){
 		console.log(response.Quotes.length);
 		console.log(response.Quotes[0].OutboundLeg.CarrierIds[0])
 		for (var i = 0 ; i < response.Quotes.length ; i++) {
+			
 			console.log(response.Quotes[i].OutboundLeg.CarrierIds[0])
 			var responseCarrierId = response.Quotes[i].OutboundLeg.CarrierIds[0].toString();
 			var responseMinPrice = response.Quotes[i].MinPrice
@@ -91,13 +92,6 @@ function browseRoutes(){
 				var airlineName = $('<h4>')
 			$(airlineName).text("Airline Name: " + carrier.Name)
 			$("#skyscanner").append(airlineName);
-			// response.Places.forEach(place => {
-			// 	console.log(place)
-			// 	var destinationLocation = $('<h4>')
-			// $(destinationLocation).text("Flight Route: " + place.CityName + ", " + place.CountryName + " | " + place.Name + ", " + place.SkyscannerCode)
-			// $("#skyscanner").append(destinationLocation);
-
-			// });
 				}
 				else {
 					console.log("no flights available")
@@ -111,8 +105,9 @@ function browseRoutes(){
 			var departureDate = $('<h4>')
 			$(departureDate).text("Departure Date: " + responseDepartureDate)
 			$("#skyscanner").append(departureDate);
-			// var horizontalRule = $('<hr>');
-			// $('#skyscanner').append(horizontalRule);
+			 var horizontalRule = $('<hr>');
+			 $('#skyscanner').append(horizontalRule);
+			 
 		}
 		
 	});
