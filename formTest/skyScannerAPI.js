@@ -77,6 +77,7 @@ function browseRoutes(){
 			var responseCarrierId = response.Quotes[i].OutboundLeg.CarrierIds[0].toString();
 			var responseMinPrice = response.Quotes[i].MinPrice
 			var responseDepartureDate = response.Quotes[i].OutboundLeg.DepartureDate
+
 			var flightOverview = $('<h3>')
 			$(flightOverview).text("Flight Information: ")
 			$("#skyscanner").append(flightOverview);
@@ -95,6 +96,7 @@ function browseRoutes(){
 				var destinationLocation = $('<h4>')
 			$(destinationLocation).text("Flight Route: " + place.CityName + ", " + place.CountryName + " | " + place.Name + ", " + place.SkyscannerCode)
 			$("#skyscanner").append(destinationLocation);
+
 			});
 				}
 				else {

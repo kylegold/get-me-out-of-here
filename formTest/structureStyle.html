@@ -139,7 +139,7 @@
           <!-- Form -->
           <label for="userState">Choose your State:</label>
           <select name="userState" id="userState" class="stateDropdown"></select>
-          <option value="blank">*State*</option>
+          <option value="blank" placeholder="*State*"></option>
         </div>
       </div>
     </div>
@@ -194,12 +194,13 @@
         style="height: 100%; width: 350px; background-color: darkseagreen"
         id="right-panel"
       ></div>
-    
+    <div id="map-container" style="position: relative;">
+
     <div
-        style="height: 77%;"
+        style="height: 77%; "
         id="map"
       ></div>
-    <div id="floating-panel" style="position: absolute">
+    <div id="floating-panel" style="position: absolute; top: 0">
       <b>Mode of Travel: </b>
       <select id="mode">
         <option value="DRIVING">Driving</option>
@@ -208,6 +209,7 @@
         <option value="TRANSIT">Transit</option>
       </select>
     </div>
+</div>
 
        
        
@@ -223,6 +225,7 @@
       "
       id="skyscanner"
     >
+    </div>
       
     </div>
     <footer style="width: 100%; height: auto; border: 1px solid black" ;>
