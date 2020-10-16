@@ -21,7 +21,7 @@ function browseRoutes(){
 	var locale = 'en-US'
 	var originPlace = airportList[0].code
 	console.log(originPlace);
-	var destinationPlace = unsafeZone[Math.floor(Math.random() * unsafeZone.length)].code;
+	var destinationPlace = safeZone[Math.floor(Math.random() * safeZone.length)].code;
 	console.log(destinationPlace);
 	var userOutDate = convertDate(todaysDate);
 	console.log(userOutDate);
@@ -37,7 +37,7 @@ function browseRoutes(){
 	};
 	console.log(settings.url);
 	$.ajax(settings).done(function (response) {
-		console.log(response);
+		console.log(response.carrier[0].name);
 		console.log(response.Quotes);
 		flights = $("<h2>").css('text-align', 'center')
             .text(userReport.name + " confirmed cases: " + userReport.confirmed)

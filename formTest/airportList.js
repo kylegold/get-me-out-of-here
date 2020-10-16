@@ -144,41 +144,41 @@ var unsafeZone = [
     },
 ]
 
-// var safeZone = [
-//     {
-//         country: 'New Zealand',
-//         name: 'Auckland Airport',
-//         code: 'NZ',
-//         lat: -37.008056,
-//         long: 174.791667,
-//     },
-//     {
-//       country: 'Thailand',
-//       name: 'Suvarnabhumi Airport',
-//       code: 'BKKT',
-//       lat: 13.6925,
-//       long: 100.75, 
-//     },
-//     {
-//         country: 'Greenland',
-//         name: 'Kangerlussuaq Airport',
-//         code: 'GL',
-//         lat: 67.016944,
-//         long: -50.689444, 
-//       },
-//       {
-//         country: 'Fiji',
-//         name: 'Nadi International Airport',
-//         code: 'FJ',
-//         lat: -17.755278,
-//         long: 177.443333, 
-//       },
-//       {
-//         country: 'Cayman Islands',
-//         name: 'Owen Roberts International Airport',
-//         code: 'GCM',
-//         lat: 19.2925,
-//         long:  -81.359167, 
-//       },
-// ]
+var safeZone = [
+    {
+        country: 'New Zealand',
+        name: 'Auckland Airport',
+        code: 'NZ',
+        lat: -37.008056,
+        long: 174.791667,
+    },
+    {
+      country: 'Thailand',
+      name: 'Suvarnabhumi Airport',
+      code: 'BKKT',
+      lat: 13.6925,
+      long: 100.75, 
+    },
+    {
+        country: 'Greenland',
+        name: 'Kangerlussuaq Airport',
+        code: 'GL',
+        lat: 67.016944,
+        long: -50.689444, 
+      },
+      {
+        country: 'Fiji',
+        name: 'Nadi International Airport',
+        code: 'FJ',
+        lat: -17.755278,
+        long: 177.443333, 
+      },
+      {
+        country: 'Cayman Islands',
+        name: 'Owen Roberts International Airport',
+        code: 'GCM',
+        lat: 19.2925,
+        long:  -81.359167, 
+      },
+]
 
