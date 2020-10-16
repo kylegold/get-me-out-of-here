@@ -21,7 +21,7 @@ function browseRoutes(){
 	var locale = 'en-US'
 	var originPlace = airportList[0].code
 	console.log(originPlace);
-	var destinationPlace = safeZone[Math.floor(Math.random() * safeZone.length)].code;
+	var destinationPlace = 'AKL';
 	console.log(destinationPlace);
 	var userOutDate = convertDate(todaysDate);
 	console.log(userOutDate);
@@ -32,10 +32,9 @@ function browseRoutes(){
 		"method": "GET",
 		"headers": {
 			"x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-			"x-rapidapi-key": "4ddfa0ddd8mshc80ad8ca9e9c972p19ec1bjsn3d5ff1634bdc"
+			"x-rapidapi-key": "3543b93140msha4191c8dc5001b0p1bab27jsn6c3cd4591044"
 		}
 	};
-	console.log(settings.url);
 	$.ajax(settings).done(function (response) {
 		console.log(response);
 		console.log(response.Quotes.length);
@@ -77,7 +76,8 @@ function browseRoutes(){
 			var departureDate = $('<h4>')
 			$(departureDate).text("Departure Date: " + responseDepartureDate)
 			$("#skyscanner").append(departureDate);
-		
+			var horizontalRule = $('<hr>');
+			$('#skyscanner').append(horizontalRule);
 		}
 		
 	});
