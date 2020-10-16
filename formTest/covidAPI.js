@@ -57,10 +57,14 @@ var userReport;
           browseRoutes();
           initMap(userReport)
           // map needs to be called from this click event
-          report = $("<h1>").css('text-align', 'center')
+          report = $("<h2>").css('text-align', 'center')
             .text(userReport.name + " confirmed cases: " + userReport.confirmed)
             .attr("id", "reportElement");
-          $("body").append(report);
+          $("#covid-information").append(report);
+          flights = $("<h2>").css('text-align', 'center')
+            .text(userReport.name + " confirmed cases: " + userReport.confirmed)
+            .attr("id", "reportElement");
+          $("#covid-information").append(report);
         }
       }
     });

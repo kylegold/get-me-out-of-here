@@ -38,5 +38,10 @@ function browseRoutes(){
 	console.log(settings.url);
 	$.ajax(settings).done(function (response) {
 		console.log(response);
+		console.log(response.Quotes);
+		flights = $("<h2>").css('text-align', 'center')
+            .text(userReport.name + " confirmed cases: " + userReport.confirmed)
+            .attr("id", "reportElement");
+          $("#covid-information").append(report);
 	});
 }
